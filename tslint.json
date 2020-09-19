@@ -71,6 +71,8 @@
       true,
       "single"
     ],
+    "variable-name": false,
+    "one-line": false,
     "trailing-comma": false,
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,

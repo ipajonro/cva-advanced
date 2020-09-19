@@ -1,0 +1,19 @@
+<div class="container" [ngClass]="{'disabled': disabled}">
+
+  <div id="red" class="color"
+    [ngClass]="{'selected': selection === 'red'}"
+    (click)="colorSelected('red')">
+  </div>
+
+  <div id="green" class="color"
+    [ngClass]="{'selected': selection === 'green'}"
+    (click)="colorSelected('green')">
+  </div>
+
+  <div id="blue" class="color"
+    [ngClass]="{'selected': selection === 'blue'}"
+    (click)="colorSelected('blue')">
+  </div>
+
+  <div *ngIf="required" class="required">*</div>
+</div>

@@ -1,0 +1,78 @@
+:host {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  width: 192px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid lightgrey;
+
+  &.ng-invalid {
+    border: 1px solid red;
+
+    .required {
+      color: red;
+    }
+  }
+
+  .required {
+    position: absolute;
+    top: 0;
+    right: 0;
+    top: 2px;
+    right: 4px;
+    color: darkgrey;
+  }
+}
+
+.container {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  height: 100%;
+  place-content: space-between;
+
+  &.disabled::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 1px);
+    height: calc(100% + 1px);
+    border-radius: 6px;
+    background-color: lightgrey;
+    opacity: 0.8;
+  }
+
+  .color {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    cursor: pointer;
+
+    &.selected::after {
+      content: "\2714";
+      color: white;
+      display: flex;
+      flex-flow: row;
+      height: 100%;
+      place-content: center;
+      place-items: center;
+      border-radius: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+  }
+
+  #red {
+    background-color: red;
+  }
+
+  #green {
+    background-color: green;
+  }
+
+  #blue {
+    background-color: blue;
+  }
+
+}
